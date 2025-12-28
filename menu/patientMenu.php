@@ -47,6 +47,8 @@ function menuPatients() {
                     break;
 
                 case 4:
+                    echo "ID: ";
+                    $id = trim(fgets(STDIN));
                     echo "Full_Name: ";
                     $full_name = trim(fgets(STDIN));
                     echo "Gender: ";
@@ -57,7 +59,7 @@ function menuPatients() {
                     $email = trim(fgets(STDIN));
                      echo "Phone: ";
                     $phone = trim(fgets(STDIN));
-                    Patient::update($id, $full_name, $gender, $date, $email, $phone);
+                    Patient::update($id, $full_name, $gender, $date_of_birth, $email, $phone);
                     echo "Updated \n";
                     break;
 
